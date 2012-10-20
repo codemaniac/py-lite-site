@@ -1,6 +1,6 @@
 ## Synopsis
 
-Site template using Flask, Angularjs & Bootstrap
+Site template using uwsgi, Flask, Angularjs & Bootstrap
 
 ## Usage
 
