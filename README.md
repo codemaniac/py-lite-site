@@ -1,6 +1,6 @@
 ## Synopsis
 
-site template using Flask and Angularjs
+Site template using Flask, Angularjs & Bootstrap
 
 ## Usage
 
@@ -13,7 +13,7 @@ site template using Flask and Angularjs
 
 ## Contributors
 
-ashish.ap.rao at gmail.com
+ashish.ap.rao@gmail.com
 
 ## License
 
