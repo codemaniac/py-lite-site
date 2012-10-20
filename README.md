@@ -9,7 +9,7 @@ site template using Flask and Angularjs
 	$ virtualenv env
 	$ . env/bin/activate
 	$ pip install -r requirements.txt
-  $ bash admin.sh start-server
+	$ bash admin.sh start-server
 
 ## Contributors
 
