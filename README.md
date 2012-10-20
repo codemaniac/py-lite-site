@@ -2,6 +2,14 @@
 
 site template using Flask and Angularjs
 
+## Usage
+
+	$ git clone https://github.com/codemaniac/py-lite-site.git
+	$ cd py-lite-site
+	$ virtualenv env
+	$ . env/bin/activate
+	$ pip install -r requirements.txt
+
 ## Contributors
 
 ashish.ap.rao at gmail.com
