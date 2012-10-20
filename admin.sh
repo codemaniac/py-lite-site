@@ -30,7 +30,7 @@ if [ $opt == "start-server" ] ; then
   export UWSGI_MASTER=1
   export UWSGI_PROCESSES=4
   export UWSGI_MEMORY_REPORT=1
-  export TRAC_ENV=/tmp/mytrac
+  export TRAC_ENV=/tmp/py-lite-site-trac
   export UWSGI_PIDFILE=/tmp/py-lite-site-server.pid
   
   exec nohup uwsgi > /tmp/py-lite-site-server.log &
