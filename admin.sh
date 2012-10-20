@@ -21,7 +21,6 @@ if [ $opt == "start-server" ] ; then
   export PYTHONPATH=$pwd:$PYTHONPATH  
   activate_env
   echo "Starting app..."
-  #start app
   #export UWSGI_SOCKET=/tmp/py-lite-site-server.sock
   export UWSGI_HTTP=127.0.0.1:3000
   export UWSGI_HOME=$PROJECT_ENV_PATH
@@ -31,10 +30,8 @@ if [ $opt == "start-server" ] ; then
   export UWSGI_PROCESSES=4
   export UWSGI_MEMORY_REPORT=1
   export TRAC_ENV=/tmp/py-lite-site-trac
-  export UWSGI_PIDFILE=/tmp/py-lite-site-server.pid
-  
+  export UWSGI_PIDFILE=/tmp/py-lite-site-server.pid  
   exec nohup uwsgi > /tmp/py-lite-site-server.log &
-  
   echo "App started successfully..."
   echo "Ready to use..."
 elif [ $opt == "stop-server" ] ; then
