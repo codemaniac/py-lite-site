@@ -9,7 +9,7 @@ Site template using uwsgi, Flask, Angularjs & Bootstrap
 	$ virtualenv env
 	$ . env/bin/activate
 	$ pip install -r requirements.txt
-	$ bash admin.sh start-server
+	$ bash scripts/admin.sh start-server
 
 ## Contributors
 

@@ -4,7 +4,8 @@
 pwd="$( cd -P "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 
 #DO NOT MODIFY
-PROJECT_ENV_PATH=$pwd/env
+PROJECT_HOME=$pwd/..
+PROJECT_ENV_PATH=$PROJECT_HOME/env
 
 #usage message
 if [ $# -ne 1 ]; then echo "Usage: $0 start-server|stop-server" ; exit 1 ; fi
@@ -18,7 +19,8 @@ function activate_env {
 opt=$1
 if [ $opt == "start-server" ] ; then
   echo "Starting..."
-  export PYTHONPATH=$pwd:$PYTHONPATH  
+  export PYTHONPATH=$PROJECT_HOME:$PYTHONPATH  
+  echo $PYTHONPATH
   activate_env
   echo "Starting app..."
   #export UWSGI_SOCKET=/tmp/py-lite-site-server.sock
@@ -27,9 +29,9 @@ if [ $opt == "start-server" ] ; then
   export UWSGI_MODULE=source.webapp.app
   export UWSGI_CALLABLE=app
   export UWSGI_MASTER=1
-  export UWSGI_PROCESSES=4
-  export UWSGI_MEMORY_REPORT=1
-  export TRAC_ENV=/tmp/py-lite-site-trac
+  #export UWSGI_PROCESSES=4
+  #export UWSGI_MEMORY_REPORT=1
+  #export TRAC_ENV=/tmp/py-lite-site-trac
   export UWSGI_PIDFILE=/tmp/py-lite-site-server.pid  
   exec nohup uwsgi > /tmp/py-lite-site-server.log &
   echo "App started successfully..."
