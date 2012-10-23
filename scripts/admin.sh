@@ -20,7 +20,6 @@ opt=$1
 if [ $opt == "start-server" ] ; then
   echo "Starting..."
   export PYTHONPATH=$PROJECT_HOME:$PYTHONPATH  
-  echo $PYTHONPATH
   activate_env
   echo "Starting app..."
   #export UWSGI_SOCKET=/tmp/py-lite-site-server.sock
